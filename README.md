@@ -12,9 +12,66 @@ After writing and editing the code for the refactored code, I noticed the refact
 ![2018 Original Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/2018_Original_Timer.png)
 ![2018 Refactored Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/2018_Refactored_Timer.png)
 
-A possible reason in the difference of timing may have been how the code was written. In the refactored code, three separate loops are created to set variables value, find the total daily volume, starting and ending price, and output the results. In contrast, the original code contains one nested loop to perform these same actions. Screenshots from both codes are attached below.
-![Original code](https://github.com/shireenkahlon/stock-analysis/blob/main/Original%20code.png)
-![Refactored code](https://github.com/shireenkahlon/stock-analysis/blob/main/Refactored%20code.png)
+A possible reason in the difference of timing may have been how the code was written. In the refactored code, three separate loops are created to set variables value, find the total daily volume, starting and ending price, and output the results. In contrast, the original code contains one nested loop to perform these same actions. Screenshots from both codes are posted below.
+The 2017 code is:
+For i = 0 To 11
+    ticker = tickers(i)
+    totalvolume = 0
+    'Do stuff with ticker
+'Loop through rows in the data
+    Worksheets("2018").Activate
+    For j = 2 To rowEnd
+    'Find the total volume for the ticker
+    If Cells(j, 1).Value = ticker Then
+        totalvolume = totalvolume + Cells(j, 8).Value
+    End If
+    'Find the starting price for the ticker
+    If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+        startingPrice = Cells(j, 6).Value
+    End If
+    'Find the ending price for the ticker
+    If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+        endingPrice = Cells(j, 6).Value
+    End If
+Next j
+'Output the data for the current ticker
+    Worksheets("All Stocks Analysis").Activate
+    Cells(4 + i, 1).Value = ticker
+    Cells(4 + i, 2).Value = totalvolume
+    Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
+Next i
+
+The 2018 code is:
+For i = 0 To 11
+        Worksheets("All Stocks Analysis").Activate
+        Cells(4 + i, 1).Value = tickers(i)
+        Cells(4 + i, 2).Value = tickerVolumes(i)
+        Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
+    Next i
+
+    'formatting - format numbers and add bold and and a border
+    Worksheets("All Stocks Analysis").Activate
+    Range("A3:C3").Font.Bold = True
+    Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
+    Range("B4:B15").NumberFormat = "$#,##0.00"
+    Range("C4:C15").NumberFormat = "0.0%"
+    Columns("C").AutoFit
+
+    'Declare variables for conditional formatting
+    Dim dataRowStart As Integer, dataRowEnd As Integer
+    dataRowStart = 4
+    dataRowEnd = 15
+
+    'Conditional formatting
+    For i = dataRowStart To dataRowEnd
+        If Cells(i, 3) > 0 Then
+            Cells(i, 3).Interior.Color = vbGreen
+        ElseIf Cells(i, 3) < 0 Then
+            Cells(i, 3).Interior.Color = vbRed
+        Else: Cells(i, 3).Interior.Color = xlNone
+        End If
+    Next i
+    
 
 
 ## Results
