@@ -17,7 +17,7 @@ A possible reason in the difference of timing may have been how the code was wri
 The original Code:
 ![Original_Code](https://github.com/shireenkahlon/stock-analysis/blob/main/Original%20code.png)
 The refactored Code:
-![Refactored_Code](https://github.com/shireenkahlon/stock-analysis/blob/main/Refactored%20code.png_
+![Refactored_Code](https://github.com/shireenkahlon/stock-analysis/blob/main/Refactored%20code.png)
   
     
 
