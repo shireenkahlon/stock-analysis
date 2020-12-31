@@ -2,7 +2,7 @@
 
 ## Overview of Project
 This analysis project came together to provide Steve with information regarding stocks— Steve’s parents were considering investing in stocks. This worksheet aims to help Steve’s parents by providing them an analysis of the returns and total daily volume per stock ticker. There were two objectives to this project: First, to provide Steve with information regarding the given stocks. Second, to create an Excel and VBA workbook which would provide Steve the information in a timely manner. While we previously provided Steve with a spreadsheet with the same intent, this project attempted to speed up time by refactoring the code and making the code more useful for any stocks — those in the worksheet or others Steve wants to analyze.  The results, as well as the data collected will be sent to Steve and his parents.
-[2017 results] [https://github.com/shireenkahlon/stock-analysis/blob/main/2017%20TDV%20and%20return.png]
+![2017 results](https://github.com/shireenkahlon/stock-analysis/blob/main/2017%20TDV%20and%20return.png)
 
 
 After writing and editing the code for the refactored code, I noticed the refactored code actually ran a bit slower than the original code. Screenshots from both the refactored and original code is posted below.
