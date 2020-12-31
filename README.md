@@ -49,28 +49,7 @@ For i = 0 To 11
         Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
     Next i
 
-    'formatting - format numbers and add bold and and a border
-    Worksheets("All Stocks Analysis").Activate
-    Range("A3:C3").Font.Bold = True
-    Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
-    Range("B4:B15").NumberFormat = "$#,##0.00"
-    Range("C4:C15").NumberFormat = "0.0%"
-    Columns("C").AutoFit
-
-    'Declare variables for conditional formatting
-    Dim dataRowStart As Integer, dataRowEnd As Integer
-    dataRowStart = 4
-    dataRowEnd = 15
-
-    'Conditional formatting
-    For i = dataRowStart To dataRowEnd
-        If Cells(i, 3) > 0 Then
-            Cells(i, 3).Interior.Color = vbGreen
-        ElseIf Cells(i, 3) < 0 Then
-            Cells(i, 3).Interior.Color = vbRed
-        Else: Cells(i, 3).Interior.Color = xlNone
-        End If
-    Next i
+  
     
 
 
