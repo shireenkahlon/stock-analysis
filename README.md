@@ -2,22 +2,22 @@
  
 ## Overview of Project
 The purpose of this analysis project was to provide Steve with information about stocks. The worksheet is meant to inform Steve's parents about the returns and the total daily volume of the stocks in which they are considering an investment. This project has two objectives; first, to present the information about the given stocks to Steve. A second objective was to create an Excel and a VBA workbook that would enable Steve to get the information in a timely manner. Although we previously gave Steve a spreadsheet for the same purpose, retrieving data from this spreadsheet was slow and inflexible. By refactoring the code, this project aimed to decrease the time spent in gathering information. Further, the previous spreadsheet did not allow analysis of new stocks, whereas this spreadsheet allows Steve and his parents to receive the results of new stocks as well as view the data collected.
-![2017 Results](https://github.com/shireenkahlon/stock-analysis/blob/main/2017%20TDV%20and%20return.png)
-![2018 Results](https://github.com/shireenkahlon/stock-analysis/blob/main/2018%20TDV%20and%20Return.png)
+![2017 Results](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/2017%20TDV%20and%20return.png)
+![2018 Results](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/2018%20TDV%20and%20Return.png)
  
  
 While writing and editing the code for the refactored code, I noticed it ran a little slower than the original code. Below are screenshots of both the refactored and original code.
-![2017 Original Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/2017_Original_Timer.png)
-![2017 Refactored Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/2017_RefactoredTimer.png)
-![2018 Original Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/2018_Original_Timer.png)
-![2018 Refactored Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/2018_Refactored_Timer.png)
+![2017 Original Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/2017_Original_Timer.png)
+![2017 Refactored Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/2017_RefactoredTimer.png)
+![2018 Original Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/2018_Original_Timer.png)
+![2018 Refactored Timer](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/2018_Refactored_Timer.png)
  
 A possible reason in the difference of timing may have been how the code was written. In the refactored code, three separate loops are created to set the value of the variables, find the total daily volume, starting and ending price, and output the results. In contrast, the original code contains one nested loop to perform these same actions. Screenshots from both codes are posted below.
  
 The original Code:
-![Original_Code](https://github.com/shireenkahlon/stock-analysis/blob/main/Original%20code.png)
+![Original_Code](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/Original%20code.png)
 The refactored Code:
-![Refactored_Code](https://github.com/shireenkahlon/stock-analysis/blob/main/Refactored%20code.png)
+![Refactored_Code](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/Refactored%20code.png)
    
  
  
