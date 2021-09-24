@@ -2,7 +2,11 @@
  
 ## Overview of Project
 The purpose of this analysis project was to provide Steve with information about stocks. The worksheet is meant to inform Steve's parents about the returns and the total daily volume of the stocks in which they are considering an investment. This project has two objectives; first, to present the information about the given stocks to Steve. A second objective was to create an Excel and a VBA workbook that would enable Steve to get the information in a timely manner. Although we previously gave Steve a spreadsheet for the same purpose, retrieving data from this spreadsheet was slow and inflexible. By refactoring the code, this project aimed to decrease the time spent in gathering information. Further, the previous spreadsheet did not allow analysis of new stocks, whereas this spreadsheet allows Steve and his parents to receive the results of new stocks as well as view the data collected.
+
+
 ![2017 Results](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/2017%20TDV%20and%20return.png)
+
+
 ![2018 Results](https://github.com/shireenkahlon/stock-analysis/blob/main/Screenshots/2018%20TDV%20and%20Return.png)
  
  
